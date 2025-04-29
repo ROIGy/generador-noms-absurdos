@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Generador de noms absurds</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #f5f5f5;
+    }
+    #nom {
+      font-size: 2em;
+      margin: 20px;
+      color: #444;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      border: none;
+      background-color: #4caf50;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎲 Generador de Noms Absurdos</h1>
+  <div id="nom">Prem el botó per començar</div>
+  <button onclick="generarNom()">Genera nom</button>
+
+  <script>
+    const noms = [
+      "Benito", "Elsa", "Dolores", "Armando", "Elver", "Aída", "Tomás", "Analisa", "Jorge", "Estela", "Alberto", "Marta", "Salvador", "Paco", "Carmen"
+    ];
+
+    const cognoms = [
+      "Camela", "Capunta", "Fuertes", "Esteso", "Galarga", "Nalgas", "Turbado", "Melano", "Nitales", "Derretida", "Clavo", "Gaña", "Nalgón", "Merlo", "Demente"
+    ];
+
+    function generarNom() {
+      const nom = noms[Math.floor(Math.random() * noms.length)];
+      const cognom = cognoms[Math.floor(Math.random() * cognoms.length)];
+      document.getElementById("nom").textContent = `${nom} ${cognom}`;
+    }
+  </script>
+</body>
+</html>
